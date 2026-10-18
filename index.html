@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stone Wasi · Casa de huéspedes en Montevideo</title>
+<meta name="description" content="Stone Wasi: casa de huéspedes con decoración artística en Mac Eachen 1578, Montevideo. Zona tranquila y segura, y un anfitrión atento.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gelasio:wght@500;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3EFE8;--surface:#FFFFFF;--ink:#2E2A26;--muted:#655E56;--accent:#8C5A3C;--accent-ink:#FFFFFF;--soft:#E3D6C6;--line:#E0D8CC;
+--display:Gelasio, Georgia, serif;--body:Figtree, system-ui, sans-serif;--r:16px;--br:999px;--dw:700;--tr:-0.01em;--h1:5rem}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.08;letter-spacing:var(--tr)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+svg.i{width:20px;height:20px;flex:none}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:var(--br);font-weight:700;text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--accent);color:var(--accent-ink)}
+.btn-ghost{border:2px solid currentColor}
+.stars{color:var(--star,var(--accent));letter-spacing:2px}
+.rating{display:flex;flex-wrap:wrap;align-items:center;gap:10px;color:var(--muted);font-size:.95rem}
+.rating b{color:var(--ink)}
+.art svg{width:100%;height:auto;display:block}
+.mark{width:34px;height:34px;flex:none}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:var(--dw);font-size:1.3rem;line-height:1.1}
+.kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.map{background:var(--soft);overflow:hidden}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.hours{border-collapse:collapse;width:100%;max-width:440px}
+.hours caption{text-align:left;font-family:var(--display);font-weight:var(--dw);font-size:1.3rem;margin-bottom:8px}
+.hours th,.hours td{text-align:left;padding:8px 0;border-bottom:1px solid var(--line);font-weight:400}
+.hours th{color:var(--muted);width:45%}
+.note{display:flex;gap:10px;color:var(--muted)}
+.rows{display:grid;gap:16px}
+.row{display:flex;gap:12px;align-items:flex-start}
+.row a{font-weight:700}
+.float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:50;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+.float svg{width:28px;height:28px}
+.ft{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.ft .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+.mn .wrap{max-width:860px}
+.mn header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:28px;padding-bottom:28px}
+.mn header ul{display:flex;gap:22px;list-style:none;font-size:.95rem}
+.mn header ul a{text-decoration:none;color:var(--muted)}
+.mn header ul a:hover{color:var(--ink);text-decoration:underline}
+@media(max-width:700px){.mn header nav{display:none}}
+.mn-hero{padding:70px 0 90px}
+.mn-hero .art{width:120px;margin-bottom:36px}
+.mn-hero h1{font-size:clamp(2.4rem,6vw,calc(var(--h1) * .9));max-width:17ch;margin-bottom:22px}
+.mn-hero .lead{color:var(--muted);font-size:1.15rem;max-width:52ch;margin-bottom:30px}
+.mn-hero .cta{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
+.mn-hero .link{font-weight:700;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:2px}
+.mn-hero .rating{margin-top:28px}
+.mn-sec{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:64px 0;border-top:1px solid var(--line)}
+.mn-sec>.kicker{padding-top:8px}
+.mn h2{font-size:clamp(1.7rem,3.4vw,2.3rem);margin-bottom:12px}
+.mn .sub{color:var(--muted);margin-bottom:28px;max-width:52ch}
+.mn dl{display:grid}
+.mn dl div{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.mn dt{font-weight:700}
+.mn dd{color:var(--muted)}
+.mn-sec p{margin-bottom:14px;max-width:58ch}
+.mn-facts{color:var(--muted);margin-top:18px}
+.mn-facts b{color:var(--ink);font-weight:700}
+.mn-facts span+span::before{content:' · '}
+.mn-q figure{margin-bottom:26px}
+.mn-q blockquote{font-style:italic;font-size:1.12rem}
+.mn-q figcaption{color:var(--muted);margin-top:6px}
+.mn-c{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:30px}
+.mn .map{border-radius:var(--r);filter:grayscale(1)}
+.mn .map:hover{filter:none}
+.mn .map iframe{min-height:300px}
+@media(max-width:700px){.mn-sec{grid-template-columns:1fr;gap:10px}.mn dl div,.mn-c{grid-template-columns:1fr;gap:6px}}
+.mn-close{padding:80px 0;border-top:1px solid var(--line)}
+.mn-close h2{margin-bottom:10px}
+.mn-close p{color:var(--muted);margin-bottom:24px}
+
+
+</style>
+</head>
+<body>
+<div class="mn">
+<header><div class="wrap"><a class="logo" href="#"><svg class="mark" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="var(--accent)"/><path d="M7 17 17 9l10 8M10 15v10h14V15" fill="none" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linejoin="round"/><rect x="15" y="19" width="4" height="6" fill="var(--accent-ink)"/></svg><span>Stone Wasi</span></a><nav aria-label="Principal"><ul><li><a href="#servicios">La casa</a></li><li><a href="#lugar">El lugar</a></li><li><a href="#contacto">Contacto</a></li></ul></nav></div></header>
+<main><div class="wrap">
+<section class="mn-hero">
+  <div class="art" aria-hidden="true"><svg viewBox="0 0 240 200"><rect x="6" y="6" width="228" height="188" rx="18" fill="var(--soft)"/><circle cx="182" cy="52" r="20" fill="var(--accent)"/><circle cx="192" cy="45" r="18" fill="var(--soft)"/><circle cx="60" cy="40" r="3" fill="var(--ink)"/><circle cx="96" cy="58" r="2.5" fill="var(--ink)"/><circle cx="136" cy="34" r="3" fill="var(--ink)"/><path d="M34 166V92M206 166v-34" stroke="var(--ink)" stroke-width="7" stroke-linecap="round"/><rect x="34" y="122" width="172" height="26" rx="6" fill="var(--surface)" stroke="var(--ink)" stroke-width="5"/><rect x="44" y="100" width="46" height="24" rx="10" fill="var(--surface)" stroke="var(--ink)" stroke-width="5"/><path d="M96 122c10-16 70-16 110 0" fill="var(--accent)" stroke="var(--ink)" stroke-width="5" stroke-linejoin="round"/><path d="M34 148h172" stroke="var(--ink)" stroke-width="5"/></svg></div>
+  <h1>Una casa para sentirte como en la tuya</h1><p class="lead">Casa de huéspedes con decoración artística en Mac Eachen 1578, en una zona tranquila y segura de Montevideo.</p>
+  <div class="cta"><a class="btn btn-main" href="https://wa.me/59896360725?text=Hola%20Stone%20Wasi%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span>Consultar por WhatsApp</span></a><a class="link" href="#contacto">Cómo llegar →</a></div>
+  
+</section>
+<section id="servicios" class="mn-sec"><p class="kicker">La casa</p><div>
+  <h2>La casa</h2><p class="sub">Un lugar relajado, cuidado en los detalles.</p>
+  <dl><div><dt>Decoración artística</dt><dd>Cada rincón tiene su historia.</dd></div><div><dt>Anfitrión presente</dt><dd>Mario está pendiente de que no te falte nada.</dd></div><div><dt>Zona tranquila</dt><dd>Un barrio seguro para descansar.</dd></div><div><dt>Limpieza</dt><dd>Habitaciones aseadas y listas para tu llegada.</dd></div></dl>
+</div></section>
+<section id="lugar" class="mn-sec"><p class="kicker">El lugar</p><div>
+  <h2>Atención de casa</h2><p>Más que un alojamiento: un lugar donde te ayudan con recomendaciones y te hacen sentir cómodo desde que llegás.</p><p>Escribinos por WhatsApp y confirmamos tu reserva directamente.</p>
+  <p class="mn-facts"><span><b>Arte</b> en cada rincón</span><span><b>Barrio</b> tranquilo</span><span><b>Mac Eachen</b> 1578</span></p>
+</div></section>
+
+<section id="contacto" class="mn-sec"><p class="kicker">Contacto</p><div>
+  <h2>Dónde estamos</h2>
+  <div class="mn-c"><div class="rows"><div class="row"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div>Mac Eachen 1578, Montevideo<br><a href="https://www.google.com/maps/place/Stone+Wasi/data=!4m2!3m1!1s0x959f81047d25e6cd:0x11cb232141435226" target="_blank" rel="noopener">Abrir en Google Maps</a></div></div>
+<div class="row"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><a href="tel:+59896360725">096 360 725</a> o <a href="https://wa.me/59896360725?text=Hola%20Stone%20Wasi%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener">WhatsApp</a></div></div></div><div><p class="note"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Consultá disponibilidad por WhatsApp y confirmá tu llegada.</span></p></div></div>
+  <div class="map"><iframe loading="lazy" title="Mapa de Stone Wasi" src="https://www.google.com/maps?q=-34.8995526%2C-56.1501714&output=embed"></iframe></div>
+</div></section>
+<section class="mn-close"><h2>¿Buscás un lugar tranquilo?</h2><p>Escribinos y coordinamos tu estadía.</p><a class="btn btn-main" href="https://wa.me/59896360725?text=Hola%20Stone%20Wasi%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span>Consultar por WhatsApp</span></a></section>
+</div></main>
+<footer class="ft "><div class="wrap"><span>© 2026 Stone Wasi, Montevideo</span><span>Mac Eachen 1578, Montevideo</span></div></footer>
+</div>
+<a class="float" href="https://wa.me/59896360725?text=Hola%20Stone%20Wasi%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
+</body>
+</html>
