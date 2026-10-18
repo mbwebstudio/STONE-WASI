@@ -19,6 +19,7 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
 h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.08;letter-spacing:var(--tr)}
 .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+body>div{overflow-x:clip}
 svg.i{width:20px;height:20px;flex:none}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:var(--br);font-weight:700;text-decoration:none;transition:transform .15s,background .15s}
 .btn:hover{transform:translateY(-2px)}
@@ -38,7 +39,7 @@ svg.i{width:20px;height:20px;flex:none}
 .hours th,.hours td{text-align:left;padding:8px 0;border-bottom:1px solid var(--line);font-weight:400}
 .hours th{color:var(--muted);width:45%}
 .note{display:flex;gap:10px;color:var(--muted)}
-.rows{display:grid;gap:16px}
+.rows{display:grid;gap:16px;align-content:start}
 .row{display:flex;gap:12px;align-items:flex-start}
 .row a{font-weight:700}
 .float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:50;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
